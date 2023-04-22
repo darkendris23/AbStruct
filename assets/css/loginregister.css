@@ -1,0 +1,86 @@
+@import url(index.css);
+
+body {
+    padding: 4vh 0px;
+    margin: 0px;
+    min-width: 320px;
+}
+
+#AccountNotif {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 30%;
+    width: 100%;
+    transition: top 0.256s;
+}
+
+#NotifWrapper {
+    max-width: 314px;
+    width: 100%;
+    background: black;
+    color: orange;
+    text-align: center;
+    border: 3px solid gray;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#Container {
+    max-width: 320px;
+    border-radius: 5px;
+    height: 90vh;
+    margin-left: auto;
+    margin-right: auto;
+    background: #393e46;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Container p {
+    color: white;
+}
+
+#Logo {
+    margin: 20px 0px;
+    object-fit: contain;
+    height: 50px;
+}
+
+#Input {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 40px);
+    gap: 5px;
+}
+
+#Input label {
+    color: white;
+}
+
+#Input hr {
+    background: transparent;
+    border: 0px;
+}
+
+#Input input:focus {
+    outline: none;
+}
+
+#LoginBTN,
+#RegisterBTN {
+    margin-top: 10px;
+    height: 40px;
+    border: 2px solid orange;
+    border-radius: 3px;
+    background: orange;
+    color: black;
+    font-size: 20px;
+    width: calc(100% - 40px);
+}
+
+p a {
+    color: orange;
+    text-decoration: none;
+}

@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+@import url('https://fonts.cdnfonts.com/css/omnibus-2');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    min-width: 320px;
+    font-family: 'FreeSerif', sans-serif;
+}
+
+/* Header */
+#Header {
+    background: rgb(57, 62, 70);
+    background: -moz-linear-gradient(180deg, rgba(57, 62, 70, 1) 0%, rgba(109, 152, 134, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(57, 62, 70, 1) 0%, rgba(109, 152, 134, 1) 100%);
+    background: linear-gradient(180deg, rgba(57, 62, 70, 1) 0%, rgba(109, 152, 134, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#393e46", endColorstr="#6d9886", GradientType=1);
+}
+
+#Header-Container {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0px 5px;
+}
+
+#Header-Container #userPanel {
+    display: inline;
+    flex: 1;
+}
+
+#userPanel button {
+    float: right;
+    margin-right: 5px;
+    height: 35px;
+    width: 70px;
+}
+
+#userPanel button#LoginBTN {
+    font-family: Koulen;
+    font-weight: 0;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #ef9a53;
+    border: solid #EF9A53 2px;
+    border-radius: 3px;
+    transition: 724ms;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#userPanel button#RegisterBTN {
+    font-family: Koulen;
+    font-weight: 0;
+    font-size: 16px;
+    color: #ef9a53;
+    background-color: transparent;
+    border: solid #EF9A53 2px;
+    border-radius: 3px;
+    transition: 724ms;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Below the header */
+#Item-Search {
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 490px) {
+    #Keyword-Wrapper {
+        visibility: hidden;
+    }
+}
+
+#Keyword-Wrapper {
+    display: inline;
+    flex: 1;
+    padding-left: 5px;
+    margin-right: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#Keyword-Wrapper ul {
+    padding-left: 0px;
+}
+
+#Keyword-Wrapper ul li {
+    display: inline;
+    margin: 0px 3px;
+}
+
+#Search-Container {
+    display: flex;
+    padding-right: 5px;
+}
+
+#Search-Container #SearchBox,
+#Search-Container #SearchBTN {
+    border: 2px solid black;
+}
+
+#Search-Container #SearchBox {
+    border-right: none;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#Search-Container #SearchBTN {
+    border-left: none;
+    border-radius: 0px 10px 10px 0px;
+    background: white;
+}
+
+/* Body */
+#Body {
+    height: fit-content;
+    min-height: 500px;
+    padding: 20px 0px;
+}
+
+#Listing.grid {
+    margin: 0 auto;
+}
+
+.grid-sizer,
+.grid-item {
+    width: 320px;
+}
+
+@media only screen and (max-width: 320px) {
+    .grid-sizer {
+        width: 320px;
+    }
+
+    .grid-item {
+        width: 320px;
+    }
+}
+
+.grid-item {
+    border: 5px solid transparent;
+}
+
+.grid-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.grid-item .ProductInfo {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    bottom: 4px;
+    z-index: 5;
+    overflow: hidden;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.256s;
+}
+
+.grid-item:hover .ProductInfo {
+    opacity: 1;
+}
+
+.ProductInfo hr {
+    border-radius: 5px;
+    width: 60%;
+    background: black;
+    border: 1px solid transparent;
+}
+
+.ProductInfo .ProductTitle,
+.ProductInfo .ProductDetails,
+.ProductInfo .ProductPosting  {
+    margin: 0;
+    padding: 0;
+    padding: 5px;
+}
+
+.ProductInfo .ProductDetails {
+    line-height: 1.3;
+}
+
+.ProductInfo .ProductPosting {
+    margin-top: -5px;
+    text-align: center;
+}
+
+/* Footer */
+#Footer {
+    height: 50px;
+    background: black;
+}
