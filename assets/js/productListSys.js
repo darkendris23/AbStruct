@@ -13,8 +13,6 @@ function dateDiff(targ) {
 
     let diff = t.getDate() - new Date().getDate();
 
-    console.log(diff);
-
     var hours = t.getHours();
     var minutes = t.getMinutes();
     var ampm = hours >= 12 ? 'PM' : 'AM';
@@ -23,13 +21,14 @@ function dateDiff(targ) {
     minutes = minutes < 10 ? '0' + minutes : minutes;
     var strTime = hours + ':' + minutes + ' ' + ampm;
 
+    if (diff < -1) return diff + " days ago"
+    if (diff == -1) return "Yesterday"
     if (diff == 0) return "Today at " + strTime     // if now
     if (diff == 1) return "in 1 day at " + strTime  // if in a day
     return "in " + diff + " days at " + strTime;    // if more days ahead
 }
 
 async function loadProduct() {
-    console.log("start")
     let data = await fetchProducts();
 
     data.forEach(item => {

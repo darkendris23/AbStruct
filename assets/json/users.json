@@ -1,29 +1,26 @@
 [
     {
-        "username": "john",
-        "password": "doe",
-        "firstName": "John",
-        "lastName": "Doe",
-        "gender": "Male",
-        "profileURL": "img/male.png",
-        "email": "john.doe@example.com"
-    },
-    {
-        "username": "jane",
-        "password": "doe",
-        "firstName": "Jane",
-        "lastName": "Doe",
-        "gender": "Female",
-        "profileURL": "img/female.png",
-        "email": "jane.doe@example.com"
-    },
-    {
+        "id": 1,
         "username": "Reiko14",
-        "password": "Admin",
-        "firstName": "Riogin Eliemar",
-        "lastName": "Pon-an",
-        "gender": "Male",
-        "profileURL": "img/male.png",
-        "email": "riotaku14@gmail.com"
+        "password": "admin",
+        "email": "riotaku14@gmail.com",
+        "firstname": "Riogin Eliemar",
+        "lastname": "Pon-an"
+    },
+    {
+        "id": 2,
+        "username": "JohnDoe",
+        "password": "Doe",
+        "email": "johndoe@gmail.com",
+        "firstname": "John",
+        "lastname": "Doe"
+    },
+    {
+        "id": 3,
+        "username": "JaneDoe",
+        "password": "Doe",
+        "email": "janedoe@gmail.com",
+        "firstname": "Jane",
+        "lastname": "Doe"
     }
 ]
