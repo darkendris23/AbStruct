@@ -16,5 +16,14 @@
         "gender": "Female",
         "profileURL": "img/female.png",
         "email": "jane.doe@example.com"
+    },
+    {
+        "username": "Reiko14",
+        "password": "Admin",
+        "firstName": "Riogin Eliemar",
+        "lastName": "Pon-an",
+        "gender": "Male",
+        "profileURL": "img/male.png",
+        "email": "riotaku14@gmail.com"
     }
 ]

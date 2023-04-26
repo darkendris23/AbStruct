@@ -8,40 +8,95 @@ async function fetchData() {
     }
 }
 
-async function Login() {
-    let data = await fetchData();
+async function Login(user,pass) {
+    let data = await fetchData(); // Get user information from json
 
-    let username = document.getElementById("Username").value;
-    let password = document.getElementById("Password").value;
+    let hasAccount = false; // false by default
 
-    let hasAccount = false;
-    let name;
+    // Evaluate database for a match
+    try {
+        data.forEach(db => {
+            if (db.username == user && db.password == pass) {
+                hasAccount = true;
 
-    data.forEach(db => {
-        if (db.username == username && db.password == password) {
-            hasAccount = true
-            name = db.firstName
-        }
-    });
-
+                // Store data locally
+                localStorage.setItem("abstruct_loggedin", true);
+                localStorage.setItem("abstruct_accountID", db.id);
+                localStorage.setItem("abstruct_user", db.username);
+                localStorage.setItem("abstruct_firstname", db.firstname);
+                localStorage.setItem("abstruct_lastname", db.lastname);
+                localStorage.setItem("abstruct_email", db.email);
+                throw new Error("Account found.")
+            }
+        });
+    } catch (error) {
+        
+    }
+    
+    // Show notification on Success or Fail
     let base = document.getElementById("AccountNotif");
 
     if (hasAccount == true) {
         let segment = `<div id="NotifWrapper">
-            <h3><i class="fa fa-check"></i> Logged in! Welcome, ${name}</h3>
+            <h3><i class="fa fa-check"></i> Logged in! Welcome, ${localStorage.getItem("abstruct_firstname")}</h3>
         </div>`
 
         base.innerHTML += segment;
+
+        setTimeout(() => {// go back to index after storing data
+            window.location.href = "/index.html"
+
+        }, 1000);
     } else {
         let segment = `<div id="NotifWrapper">
             <h3><i class="fa fa-times"></i> Incorrect username or password</h3>
         </div>`
 
         base.innerHTML += segment;
-    }
 
-    setTimeout(() => {
-        let notif = document.getElementById("AccountNotif");
-        notif.removeChild(notif.firstElementChild)
-    }, 1000);
+        setTimeout(() => {
+            let notif = document.getElementById("AccountNotif");
+            notif.removeChild(notif.firstElementChild)
+        }, 1000);
+    }
+}
+
+// Update index header
+function loginStatus() {
+    let panel = document.getElementById('userPanel');
+    if (localStorage.getItem("abstruct_loggedin") == "true") {
+        panel.innerHTML = `<div id="userName">
+        <ul>
+            <li>
+                <h3><i class="fa fa-user"></i> ${localStorage.getItem("abstruct_user")}</h3>
+                <ul>
+                    <li>Account</li>
+                    <li><a href="#" onclick="Logout();">Logout</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </div>`
+    } else {
+        panel.innerHTML = `<div id="LogRegBTN">
+        <button id="LoginBTN" onclick="window.location.href='page/account/login.html';">Login</button>
+        <button id="RegisterBTN" onclick="window.location.href='page/account/register.html';">Register</button>
+    </div>`
+    }
+}
+
+// ===========================================================================
+// Register
+
+//============================================================================
+// Logout
+function Logout() {
+    localStorage.removeItem("abstruct_loggedin");
+    localStorage.removeItem("abstruct_accountID");
+    localStorage.removeItem("abstruct_user");
+    localStorage.removeItem("abstruct_firstname");
+    localStorage.removeItem("abstruct_lastname");
+    localStorage.removeItem("abstruct_email");
+    location.reload();
 }

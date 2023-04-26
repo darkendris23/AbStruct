@@ -1,9 +1,15 @@
 @import url(index.css);
 
 body {
-    padding: 4vh 0px;
-    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     min-width: 320px;
+    background: url("/assets/img/desmumtz11.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
 
 #AccountNotif {
@@ -27,6 +33,7 @@ body {
 }
 
 #Container {
+    flex-grow: 1;
     max-width: 320px;
     border-radius: 5px;
     height: 90vh;
@@ -53,6 +60,22 @@ body {
     flex-direction: column;
     width: calc(100% - 40px);
     gap: 5px;
+}
+
+#Input div, #Input div div {
+    display: flex;
+
+    width: 100%;
+}
+
+#Input div div {
+    flex-direction: column;
+    flex-shrink: 1;
+}
+
+#Input div div input {
+    margin-top: 3px;
+    width: 94%;
 }
 
 #Input label {

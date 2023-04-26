@@ -2,28 +2,36 @@
 <html>
     <header>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/assets/css/loginregister.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/assets/css/account.css">
 
         <title>AbStruct | Register</title>
     </header>
     <body>
         <section id="Container">
-            <img src="/assets/img/logo.png" id="Logo"/>
+            <img src="/assets/img/logo.png" id="Logo" onclick="window.location.href = '/index.html'"/>
             <form id="Input">
+                <div>
+                    <div>
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="firstname"/>
+                    </div>
+                    <div>
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname"/>
+                    </div>
+                </div>
                 <label for="Username">Username:</label>
                 <input type="text" id="Username" required/>
-                <hr/>
                 <label for="Email">Email:</label>
                 <input type="text" id="Email" required/>
-                <hr/>
                 <label for="Password">Password:</label>
                 <input type="password" id="Password" required/>
                 <label for="RePassword">Re-Enter Password:</label>
                 <input type="password" id="RePassword" required/>
             </form>
-            <button id="RegisterBTN">Register</button>
+            <button id="RegisterBTN" onclick="register()">Register</button>
             <p>Already had an account? <a href="login.html">Login</a></p>
         </section>
     </body>
+    <script src="/assets/js/accountSys.js"></script>
 </html>

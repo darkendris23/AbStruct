@@ -1,8 +1,47 @@
 [
     {
-        "name":"Violet Galaxy",
-        "image":"img/sample",
-        "date":"1681394313",
-        "owner":"Reiko"
+        "id": 1,
+        "title": "The Ship",
+        "authorid": 2,
+        "auctiondate": "2023-04-30",
+        "auctiontime": "09:00:00",
+        "imagelink": "/assets/img/product/painting1.jpg",
+        "pagelink": "link"
+    },
+    {
+        "id": 2,
+        "title": "Natura Verde",
+        "authorid": 3,
+        "auctiondate": "2023-04-26",
+        "auctiontime": "09:00:00",
+        "imagelink": "/assets/img/product/painting2.jpg",
+        "pagelink": "link"
+    },
+    {
+        "id": 3,
+        "title": "La Vinta",
+        "authorid": 3,
+        "auctiondate": "2023-04-25",
+        "auctiontime": "10:00:00",
+        "imagelink": "/assets/img/product/painting3.jpg",
+        "pagelink": "link"
+    },
+    {
+        "id": 4,
+        "title": "Colorette De Mascara",
+        "authorid": 2,
+        "auctiondate": "2023-04-28",
+        "auctiontime": "08:30:00",
+        "imagelink": "/assets/img/product/painting4.jpg",
+        "pagelink": "link"
+    },
+    {
+        "id": 5,
+        "title": "Le Escapo",
+        "authorid": 2,
+        "auctiondate": "2023-04-29",
+        "auctiontime": "13:00:00",
+        "imagelink": "/assets/img/product/painting5.jpg",
+        "pagelink": "link"
     }
 ]

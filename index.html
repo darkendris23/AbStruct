@@ -3,24 +3,22 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="">
+
     <title>AbStruct</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 </head>
 
-<body>
+<body onload="loginStatus(); loadProduct()">
     <header id="Header">
         <div id="Header-Container">
-            <img id="logo" src="img/logo.png" height="30px" />
+            <img id="logo" src="assets/img/logo.png" height="30px" />
             <div id="userPanel">
-                <div id="LogRegBTN">
-                    <button id="LoginBTN" onclick="window.location.href='sites/account/login.html';">Login</button>
-                    <button id="RegisterBTN">Register</button>
-                </div>
+                
             </div>
         </div>
 
@@ -44,45 +42,12 @@
     <section id="Body">
         <div id="Listing" class="grid">
 
-            <div class="grid-item">
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg" onclick="location.href='sites/item/mona_lisa.html';"/>
-                <div class="ProductInfo">
-                    <h4 class="ProductTitle">Mona Lisa</h4>
-                    <p class="ProductDetails">
-                        Author: Leonardo DaVinci <br/>
-                        Description: 77 cm x 53 cm (30 in x 21 in). Oil paint on a poplar wood panel. <br/>
-                        Starting Price: 120.00php <br/>
-                        Condition: Antique <br/>
-                        Location: Paris, France <br/>
-                        Auction Starts on April 28, 2023
-                    </p>
-                    <hr>
-                    <h5 class="ProductPosting">2 Days Ago</h5>
-                </div>
-            </div>
-            <div class="grid-item">
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/800px-1665_Girl_with_a_Pearl_Earring.jpg" />
-            </div>
-            <div class="grid-item">
-                <img src="https://sep.turbifycdn.com/ty/cdn/madisonartshop/most-famous-paintings-2.jpg?t=1678352599&" />
-            </div>
-            <div class="grid-item">
-                <img src="https://sep.turbifycdn.com/ty/cdn/madisonartshop/most-famous-paintings-3.jpg?t=1678352599&" />
-            </div>
-            <div class="grid-item">
-                <img src="https://sep.turbifycdn.com/ty/cdn/madisonartshop/most-famous-paintings-4.jpg?t=1678352599&" />
-            </div>
-
-
         </div>
     </section>
     <footer id="Footer">
 
     </footer>
 </body>
-<script src="assets/js/masonry.pkgd.js"></script>
-<script src="assets/js/masonry_layout.js"></script>
-
+<script src="assets/js/accountSys.js"></script>
+<script src="assets/js/productListSys.js"></script>
 </html>
