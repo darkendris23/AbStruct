@@ -21,7 +21,7 @@ function dateDiff(targ) {
     minutes = minutes < 10 ? '0' + minutes : minutes;
     var strTime = hours + ':' + minutes + ' ' + ampm;
 
-    if (diff < -1) return diff + " days ago"
+    if (diff < -1) return Math.abs(diff) + " days ago"
     if (diff == -1) return "Yesterday"
     if (diff == 0) return "Today at " + strTime     // if now
     if (diff == 1) return "in 1 day at " + strTime  // if in a day
@@ -34,7 +34,13 @@ async function loadProduct() {
     data.forEach(item => {
         // Pass data for product card
         if (item.isDeleted) return;
-        let diff = dateDiff(item.auctiondate + 'T' + item.auctiontime);
+        let diff;
+        if (item.auctiondate && item.auctiontime) {
+            console.log(item.auctiondate + " " + item.auctiontime)
+            diff = dateDiff(item.auctiondate + 'T' + item.auctiontime);
+        } else {
+            diff = "Not for sale"
+        }
         productDisplay(item.imagelink, item.title, item.authorid, diff)
     });
 }
@@ -70,7 +76,7 @@ async function productDisplay(img, title, user, timeleft) {
             ${title}
         </h4>
         <p class="item-author"><i class="fa fa-user"></i> ${user}</p>
-        <h5 class="item-date">Auction in<br />
+        <h5 class="item-date">Auction<br />
             <p>${timeleft}</p>
         </h5>
     </div>

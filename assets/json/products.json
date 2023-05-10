@@ -1,47 +1,64 @@
 [
-    {
-        "id": 1,
-        "title": "The Ship",
-        "authorid": 2,
-        "auctiondate": "2023-04-30",
-        "auctiontime": "09:00:00",
-        "imagelink": "/assets/img/product/painting1.jpg",
-        "pagelink": "link"
-    },
-    {
-        "id": 2,
-        "title": "Natura Verde",
-        "authorid": 3,
-        "auctiondate": "2023-04-26",
-        "auctiontime": "09:00:00",
-        "imagelink": "/assets/img/product/painting2.jpg",
-        "pagelink": "link"
-    },
-    {
-        "id": 3,
-        "title": "La Vinta",
-        "authorid": 3,
-        "auctiondate": "2023-04-25",
-        "auctiontime": "10:00:00",
-        "imagelink": "/assets/img/product/painting3.jpg",
-        "pagelink": "link"
-    },
-    {
-        "id": 4,
-        "title": "Colorette De Mascara",
-        "authorid": 2,
-        "auctiondate": "2023-04-28",
-        "auctiontime": "08:30:00",
-        "imagelink": "/assets/img/product/painting4.jpg",
-        "pagelink": "link"
-    },
-    {
-        "id": 5,
-        "title": "Le Escapo",
-        "authorid": 3,
-        "auctiondate": "2023-04-29",
-        "auctiontime": "13:00:00",
-        "imagelink": "/assets/img/product/painting5.jpg",
-        "pagelink": "link"
+  {
+    "id": 1,
+    "title": "The Ship",
+    "authorid": 2,
+    "auctiondate": "2023-04-30",
+    "auctiontime": "09:00:00",
+    "imagelink": "/assets/img/product/painting1.jpg",
+    "pagelink": "/page/product/productLayout.html",
+    "isDeleted": "",
+    "samples": [
+      "/assets/img/product/painting1.jpg",
+      "https://a-static.besthdwallpaper.com/fantasy-world-wallpaper-2880x1620-29897_52.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeJgpMZfb9Cm3TkewuWFpHmPaV0CrL5oQrkw&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXlAEoR2CjyUszNBe-MA1Ln-8kgiXkNc7mxQ&usqp=CAU"
+    ],
+    "info": {
+      "medium": "test",
+      "size": "test",
+      "condition": "test",
+      "details": "test"
     }
+  },
+  {
+    "id": 2,
+    "title": "Natura Verde",
+    "authorid": 3,
+    "auctiondate": "2023-04-26",
+    "auctiontime": "09:00:00",
+    "imagelink": "/assets/img/product/painting2.jpg",
+    "pagelink": "link",
+    "isDeleted": ""
+  },
+  {
+    "id": 3,
+    "title": "La Vinta",
+    "authorid": 3,
+    "auctiondate": "2023-04-25",
+    "auctiontime": "10:00:00",
+    "imagelink": "/assets/img/product/painting3.jpg",
+    "pagelink": "link",
+    "isDeleted": ""
+  },
+  {
+    "id": 4,
+    "title": "Colorette De Mascara",
+    "authorid": 2,
+    "auctiondate": "",
+    "auctiontime": "08:30:00",
+    "imagelink": "/assets/img/product/painting4.jpg",
+    "pagelink": "link",
+    "isDeleted": ""
+  },
+  {
+    "id": 5,
+    "title": "Le Escapo",
+    "authorid": 3,
+    "auctiondate": "2023-04-29",
+    "auctiontime": "13:00:00",
+    "imagelink": "/assets/img/product/painting5.jpg",
+    "pagelink": "link",
+    "isDeleted": ""
+  }
 ]
