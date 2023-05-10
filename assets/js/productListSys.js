@@ -10,8 +10,10 @@ async function fetchProducts() {
 
 function dateDiff(targ) {
     let t = new Date(targ);
+    let c = new Date();
 
-    let diff = t.getDate() - new Date().getDate();
+    let diff = t - c
+    diff = Math.ceil(diff / (1000 * 60 * 60 * 24))
 
     var hours = t.getHours();
     var minutes = t.getMinutes();
@@ -20,6 +22,11 @@ function dateDiff(targ) {
     hours = hours ? hours : 12; // the hour '0' should be '12'
     minutes = minutes < 10 ? '0' + minutes : minutes;
     var strTime = hours + ':' + minutes + ' ' + ampm;
+
+    // Debugging
+    //console.log(t)
+    //console.log(c)
+    //console.log(diff)
 
     if (diff < -1) return Math.abs(diff) + " days ago"
     if (diff == -1) return "Yesterday"
@@ -36,7 +43,6 @@ async function loadProduct() {
         if (item.isDeleted) return;
         let diff;
         if (item.auctiondate && item.auctiontime) {
-            console.log(item.auctiondate + " " + item.auctiontime)
             diff = dateDiff(item.auctiondate + 'T' + item.auctiontime);
         } else {
             diff = "Not for sale"

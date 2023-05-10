@@ -71,6 +71,31 @@ async function fetchUsers() {
     }
 }
 
+function dateDiff(targ) {
+    let t = new Date(targ);
+    let c = new Date();
+
+    let diff = t - c
+    diff = Math.ceil(diff / (1000 * 60 * 60 * 24))
+
+    var hours = t.getHours();
+    var minutes = t.getMinutes();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    var strTime = hours + ':' + minutes + ' ' + ampm;
+
+    console.log(t)
+    console.log(c)
+    console.log(diff)
+
+    if (diff <= -1) return "Ended"
+    if (diff == 0) return "Today at " + strTime     // if now
+    if (diff == 1) return "in 1 day at " + strTime  // if in a day
+    return "in " + diff + " days at " + strTime;    // if more days ahead
+}
+
 async function productLayoutAssembler() {
     // Get all placeholders
     let imgContainer = document.getElementById('lbxItemContainer');
@@ -130,4 +155,18 @@ async function productLayoutAssembler() {
     });
 
     // Repeat process for time diff
+    let diff = await dateDiff(extracted.auctiondate+'T'+extracted.auctiontime)
+    console.log(diff)
+
+    let auction = document.getElementById('productAuctionTime')
+    let auctionBTN = document.getElementById('gotoAuctionBTN')
+    if (diff.toLowerCase() == 'ended') {
+        auction.innerHTML = ''
+        auctionBTN.disabled = true
+    } else if (diff.toLowerCase().includes('today')) {
+        auction.innerHTML = `Auction ${diff}`
+    } else {
+        auction.innerHTML = `Auction ${diff}`
+        auctionBTN.disabled = true
+    }
 }
