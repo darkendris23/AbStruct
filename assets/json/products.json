@@ -48,12 +48,12 @@
       "/assets/img/product/painting3.jpg"
     ],
     "info": {
-      "medium": "test",
-      "size": "test",
-      "condition": "test",
-      "details": "test"
+      "medium": "Oil on canvas",
+      "size": "36 inches (height) x 48 inches (width)",
+      "condition": "Excellent",
+      "details": "A mesmerizing painting that captures the vibrant spirit of the traditional Filipino boat called a vinta. The artist skillfully employs oil on canvas to bring forth a stunning portrayal of this iconic vessel. The colors used in the artwork are rich and lively, reflecting the vivid hues often associated with vintas."
     },
-    "pagelink": "link",
+    "pagelink": "/page/product/la_vinta.html",
     "roomlink": "https://meet.google.com/aqs-gkgy-kko"
   },
   {
@@ -67,12 +67,12 @@
       "/assets/img/product/painting4.jpg"
     ],
     "info": {
-      "medium": "test",
-      "size": "test",
-      "condition": "test",
-      "details": "test"
+      "medium": "Acrylic on canvas",
+      "size": "24 inches (height) x 36 inches (width)",
+      "condition": "Excellent",
+      "details": "A captivating painting that explores the allure and mystery of masks. Created using vibrant acrylic paints on canvas, the artist skillfully brings to life a visually striking and imaginative composition."
     },
-    "pagelink": "link",
+    "pagelink": "/page/product/colorette_de_mascara.html",
     "roomlink": "https://meet.google.com/aqs-gkgy-kko"
   },
   {
@@ -86,12 +86,12 @@
       "/assets/img/product/painting5.jpg"
     ],
     "info": {
-      "medium": "test",
-      "size": "test",
-      "condition": "test",
-      "details": "test"
+      "medium": "Mixed media on canvas",
+      "size": "48 inches (height) x 60 inches (width)",
+      "condition": "Excellent",
+      "details": "An extraordinary mixed media painting that transports viewers into a realm of ethereal beauty and tranquility. The artist has employed a variety of mediums on canvas to create a visually stunning and immersive artwork."
     },
-    "pagelink": "link",
+    "pagelink": "/page/product/le_escapo.html",
     "roomlink": "https://meet.google.com/aqs-gkgy-kko"
   }
 ]
