@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/products.css">
+    <title>Product Name</title>
+
+</head>
+
+<body onload="loginStatus(); productLayoutAssembler()">
+    <header id="Header">
+        <div id="Header-Container">
+            <a href="/index.html"><img id="Logo" src="/assets/img/logo.svg"/></a>
+            <div id="userPanel">
+
+            </div>
+        </div>
+
+        <nav id="Item-Search">
+            <div id="Keyword-Wrapper">
+                <ul>
+                    <li>Painting</li>
+                    <li>Sculptures</li>
+                    <li>Digital</li>
+                    <li>Sketches</li>
+                </ul>
+            </div>
+            <div id="Search-Container">
+                <input type="text" id="SearchBox">
+                <button id="SearchBTN">
+                    <i class="fa fa-search fa-rotate-90"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="productPanel">
+        <div id="productPanelLeft">
+            <div id="LightboxPreview">
+                <img />
+            </div>
+            <div id="LightboxItems">
+                <div id="lbxBTN_prev" onclick="lbx_prev()">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </div>
+                <div id="lbxBTN_next" onclick="lbx_next()">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </div>
+
+                <div id="lbxItemContainer">
+
+                </div>
+            </div>
+        </div>
+        <div id="productPanelRight">
+            <h1 id="productTitle">Title</h1>
+            <div id="productDetails-Container">
+
+            </div>
+            <table id="productDetails">
+                <tr>
+                    <td>Medium: </td>
+                    <td id="labelMedium"></td>
+                </tr>
+                <tr>
+                    <td>Size: </td>
+                    <td id="labelSize"></td>
+                </tr>
+                <tr>
+                    <td>Condition: </td>
+                    <td id="labelCondition"></td>
+                </tr>
+                <tr>
+                    <td>Details: </td>
+                    <td id="labelDetails"></td>
+                </tr>
+                <tr>
+                    <td>Author: </td>
+                    <td id="labelAuthor"></td>
+                </tr>
+            </table>
+            <button id="gotoAuctionBTN">Enter Auction</button>
+            <h5 id="productAuctionTime">Auction in</h5>
+        </div>
+    </section>
+
+    <footer id="Footer">
+
+    </footer>
+    <script>
+        function changeHeight() {
+            const header = document.getElementById('Header').offsetHeight;
+            const content = document.getElementById('productPanel');
+            const footer = document.getElementById('Footer').offsetHeight;
+
+            const sum = header + footer;
+            const calc = window.innerHeight - sum;
+
+            content.style.height = calc + 'px';
+        }
+
+        changeHeight()
+    </script>
+    <script src="/assets/js/accountSys.js"></script>
+    <script src="/assets/js/productPreview.js"></script>
+</body>
+
+</html>

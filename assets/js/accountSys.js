@@ -80,14 +80,36 @@ function loginStatus() {
     </div>`
     } else {
         panel.innerHTML = `<div id="LogRegBTN">
-        <button id="LoginBTN" onclick="window.location.href='page/account/login.html';">Login</button>
-        <button id="RegisterBTN" onclick="window.location.href='page/account/register.html';">Register</button>
+        <button id="LoginBTN" onclick="window.location.href='/page/account/login.html';">Login</button>
+        <button id="RegisterBTN" onclick="window.location.href='https://www.facebook.com/profile.php?id=100092842984629';">Register</button>
     </div>`
     }
 }
 
 // ===========================================================================
 // Register
+function Register() {
+    let fname = document.getElementById('firstname')
+    let lname = document.getElementById('lastname')
+    let uname = document.getElementById('Username')
+    let sender_email = document.getElementById('Email')
+    let pass = document.getElementById('Password')
+    let repass = document.getElementById('RePassword')
+
+    console.log(pass.value)
+
+    if (repass.value !== pass.value) return alert('Password Mismatch')
+    if (fname.value && lname.value && uname.value && sender_email.value && pass.value && repass.value) {
+        constMail(fname.value, lname.value, uname.value, sender_email.value, pass.value)
+    } else {
+        alert('Form not filled up')
+    }   
+}
+
+function constMail() {
+    const newline = "%0D%0A";
+    window.open('mailto:shuriken123.rpa@gmail.com?subject=abstruct')
+}
 
 //============================================================================
 // Logout

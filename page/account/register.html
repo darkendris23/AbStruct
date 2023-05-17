@@ -8,7 +8,7 @@
     </header>
     <body>
         <section id="Container">
-            <img src="/assets/img/logo.png" id="Logo" onclick="window.location.href = '/index.html'"/>
+            <object type="image/svg+xml" data="/assets/img/logo.svg" id="Logo" onclick="window.location.href = '/index.html'"></object>
             <form id="Input">
                 <div>
                     <div>
@@ -29,9 +29,10 @@
                 <label for="RePassword">Re-Enter Password:</label>
                 <input type="password" id="RePassword" required/>
             </form>
-            <button id="RegisterBTN" onclick="register()">Register</button>
+            <button id="RegisterBTN" onclick="Register()">Register</button>
             <p>Already had an account? <a href="login.html">Login</a></p>
         </section>
     </body>
     <script src="/assets/js/accountSys.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </html>

@@ -47,11 +47,11 @@ async function loadProduct() {
         } else {
             diff = "Not for sale"
         }
-        productDisplay(item.imagelink, item.title, item.authorid, diff)
+        productDisplay(item.samples[0], item.title, item.authorid, diff, item.pagelink)
     });
 }
 
-async function productDisplay(img, title, user, timeleft) {
+async function productDisplay(img, title, user, timeleft, link) {
     let data;
 
     try {
@@ -74,7 +74,7 @@ async function productDisplay(img, title, user, timeleft) {
     }
 
     const cardLayout = `<div class="grid-item">
-    <div class="item-container">
+    <div class="item-container" onclick="window.location.href='${link}'">
         <div class="item-image">
             <img src="${img}" />
         </div>

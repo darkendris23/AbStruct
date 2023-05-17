@@ -155,18 +155,37 @@ async function productLayoutAssembler() {
     });
 
     // Repeat process for time diff
-    let diff = await dateDiff(extracted.auctiondate+'T'+extracted.auctiontime)
+    let diff
+    if (extracted.auctiondate && extracted.auctiontime) {
+        diff = await dateDiff(extracted.auctiondate+'T'+extracted.auctiontime)
+    } else {
+        diff = "NFS"
+    }
     console.log(diff)
 
     let auction = document.getElementById('productAuctionTime')
     let auctionBTN = document.getElementById('gotoAuctionBTN')
     if (diff.toLowerCase() == 'ended') {
+        auctionBTN.innerHTML = 'Auction Ended'
         auction.innerHTML = ''
         auctionBTN.disabled = true
     } else if (diff.toLowerCase().includes('today')) {
         auction.innerHTML = `Auction ${diff}`
+    } else if (diff.includes('NFS')) {
+        auctionBTN.disabled = true
+        auctionBTN.innerHTML = "Not For Sale"
+        auction.innerHTML = ''
     } else {
         auction.innerHTML = `Auction ${diff}`
         auctionBTN.disabled = true
+    }
+
+    auctionBTN.onclick = function() {
+        console.log(localStorage.getItem('abstruct_loggedin'))
+        if (localStorage.getItem('abstruct_loggedin') == 'true') {
+            window.location.href = `${extracted.roomlink}`
+        } else {
+            window.location.href = '/page/account/login.html'
+        }
     }
 }

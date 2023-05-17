@@ -3,23 +3,20 @@
     "id": 1,
     "title": "The Ship",
     "authorid": 2,
-    "auctiondate": "2023-04-30",
+    "auctiondate": "2023-05-15",
     "auctiontime": "09:00:00",
-    "imagelink": "/assets/img/product/painting1.jpg",
-    "pagelink": "/page/product/productLayout.html",
     "isDeleted": "",
     "samples": [
-      "/assets/img/product/painting1.jpg",
-      "https://a-static.besthdwallpaper.com/fantasy-world-wallpaper-2880x1620-29897_52.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeJgpMZfb9Cm3TkewuWFpHmPaV0CrL5oQrkw&usqp=CAU",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXlAEoR2CjyUszNBe-MA1Ln-8kgiXkNc7mxQ&usqp=CAU"
+      "/assets/img/product/painting1.jpg"
     ],
     "info": {
-      "medium": "test",
-      "size": "test",
-      "condition": "test",
-      "details": "test"
-    }
+      "medium": "Oil on canvas",
+      "size": "36 inches (height) x 48 inches (width)",
+      "condition": "Excellent, with vibrant colors and well-preserved texture",
+      "details": "A captivating painting that depicts a majestic vessel sailing through tumultuous waves amidst a dramatic sky. The artist skillfully captures the raw power and beauty of the sea, while also conveying a sense of adventure and uncertainty."
+    },
+    "pagelink": "/page/product/the_ship.html",
+    "roomlink": "https://meet.google.com/aqs-gkgy-kko"
   },
   {
     "id": 2,
@@ -27,9 +24,18 @@
     "authorid": 3,
     "auctiondate": "2023-04-26",
     "auctiontime": "09:00:00",
-    "imagelink": "/assets/img/product/painting2.jpg",
-    "pagelink": "link",
-    "isDeleted": ""
+    "isDeleted": "",
+    "samples": [
+      "/assets/img/product/painting2.jpg"
+    ],
+    "info": {
+      "medium": "Oil on canvas",
+      "size": "36 inches (height) x 48 inches (width)",
+      "condition": "Excellent",
+      "details": "A painting that portrays a serene and vibrant landscape filled with lush greenery."
+    },
+    "pagelink": "/page/product/natura_verde.html",
+    "roomlink": "https://meet.google.com/aqs-gkgy-kko"
   },
   {
     "id": 3,
@@ -37,9 +43,18 @@
     "authorid": 3,
     "auctiondate": "2023-04-25",
     "auctiontime": "10:00:00",
-    "imagelink": "/assets/img/product/painting3.jpg",
+    "isDeleted": "",
+    "samples": [
+      "/assets/img/product/painting3.jpg"
+    ],
+    "info": {
+      "medium": "test",
+      "size": "test",
+      "condition": "test",
+      "details": "test"
+    },
     "pagelink": "link",
-    "isDeleted": ""
+    "roomlink": "https://meet.google.com/aqs-gkgy-kko"
   },
   {
     "id": 4,
@@ -47,9 +62,18 @@
     "authorid": 2,
     "auctiondate": "",
     "auctiontime": "08:30:00",
-    "imagelink": "/assets/img/product/painting4.jpg",
+    "isDeleted": "",
+    "samples": [
+      "/assets/img/product/painting4.jpg"
+    ],
+    "info": {
+      "medium": "test",
+      "size": "test",
+      "condition": "test",
+      "details": "test"
+    },
     "pagelink": "link",
-    "isDeleted": ""
+    "roomlink": "https://meet.google.com/aqs-gkgy-kko"
   },
   {
     "id": 5,
@@ -57,8 +81,17 @@
     "authorid": 3,
     "auctiondate": "2023-04-29",
     "auctiontime": "13:00:00",
-    "imagelink": "/assets/img/product/painting5.jpg",
+    "isDeleted": "",
+    "samples": [
+      "/assets/img/product/painting5.jpg"
+    ],
+    "info": {
+      "medium": "test",
+      "size": "test",
+      "condition": "test",
+      "details": "test"
+    },
     "pagelink": "link",
-    "isDeleted": ""
+    "roomlink": "https://meet.google.com/aqs-gkgy-kko"
   }
 ]
